@@ -37,8 +37,6 @@ fun main() {
                                 this.author = author.name
                                 this.avatar = author.avatar
                             }
-                        }
-                        async {
                             PostWithComments(post, getComments(client, post.id)
                                 .map { comment ->
                                     val commentAuthor = getAuthor(client, comment.authorId)
